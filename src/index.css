@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer components {
+  .btn-color {
+    @apply bg-secondary/90  text-third font-semibold py-3 px-6 hover:!scale-110 rounded-md duration-300 hover:bg-fourth hover:text-primary
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    @apply w-4 h-4 bg-green-600 rounded-full cursor-pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    @apply w-4 h-4 bg-green-600 rounded-full cursor-pointer;
+  }
+}
+
+@layer components {
+  .smText {
+    @apply sm:text-xs
+  }
+}
+
+.hoverColour {
+  @apply bg-secondary/90 text-white font-semibold  !scale-110  duration-300
+}
+
+
+.instagram {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.hero-container {
+  background-image: url('./image/Hero.png');
+  background-size: cover;
+  filter: contrast(1);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 555px) {
+  .footer-sm {
+    text: white;
+  }
+}
+@media only screen and (min-width: 2236px) {
+  .footer-md {
+    text: #FF0000;
+  }
+}
+@media only screen and (min-width: 555px) {
+  .footer-lg {
+    text: #fff;
+  }
+}
+
+.photobanner {
+  animation: bannermove 50s linear infinite alternate-reverse;
+}
+
+@keyframes bannermove {
+  from {
+    left: 0;
+  }
+  to {
+    left: -2100px;
+  }
+}
+
